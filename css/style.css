@@ -1437,8 +1437,8 @@ body {
 .visual-slide {
     position: relative;
     display: block;
-    height: 400px;
-
+    /* max-height: 400px; */
+    min-height: 190px;
 }
 
 .visual-slide-top {
@@ -1460,23 +1460,19 @@ body {
     line-height: 37px;
 }
 
-.sw-visual-control {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-}
 
 .link-vi {
-    position: relative;
+    position: absolute;
+    left: -140%;
+    top: 0;
     display: block;
+    width: 220px;
+
     color: #3a3a3a;
     font-size: 16px;
     font-weight: 500;
     font-family: 'Gmarket Sans', sans-serif;
     line-height: 31px;
-
-    float: left;
 }
 
 .link-vi::before {
@@ -1504,6 +1500,15 @@ body {
     height: 14px;
     background-color: #f9f9f9;
 }
+
+
+.sw-visual-control {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+}
+
 
 .sw-visual-pg {
     position: relative;
@@ -1574,17 +1579,26 @@ body {
     background-position: 0px -83px;
 }
 
-.sw-visual {}
+.sw-visual {
+    overflow: visible;
+}
 
 .sw-visual .swiper-slide {
     text-align: center;
+}
+
+.sw-visual .swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px 0 12px 12px;
 }
 
 .visual-link {
     display: block;
     position: absolute;
     left: 0;
-    bottom: 42px;
+    bottom: 0;
+    transform: translateY(50%);
     height: 53px;
     padding-right: 70px;
     padding-left: 35px;
@@ -1646,9 +1660,11 @@ body {
     min-width: 80px;
     padding-top: 80px;
 
+    font-family: 'Noto Sans KR', sans-serif;
     color: #252525;
     font-size: 17px;
     line-height: 25px;
+    font-weight: 400;
 }
 
 .group-nav a::before {
@@ -1727,12 +1743,15 @@ body {
 .mayor-link {
     position: relative;
     display: block;
+    width: 55%;
 }
 
 .mayor-link a {
     position: relative;
     display: inline-block;
     height: 36px;
+
+    font-family: 'Noto Sans KR', sans-serif;
 
     border: 2px solid #fff;
     background-color: rgba(255, 255, 255, 0);
@@ -1814,6 +1833,26 @@ body {
         width: 370px;
     }
 
+    .group {   
+        padding: 25px;     
+    }
+
+    .mayor {
+        overflow: hidden;
+        padding: 20px 20px;
+        margin-top: 35px;
+    }
+
+    .mayor-link  {
+        width: 90%;
+    }
+
+    .mayor-img {
+        height: 180px;
+        width: auto;
+        right: -20px;
+    }
+
 }
 
 @media all and (max-width: 1200px) {  
@@ -1844,6 +1883,39 @@ body {
 
     .visual-right {
         width: 320px;
+    }
+    
+    .group {   
+        padding: 20px 10px;     
+    }
+
+    .mayor {
+        overflow: hidden;
+        padding: 20px 20px;
+        margin-top: 20px;
+    }
+    .mayor a {
+        font-size: 18px;
+        margin-right: 0;
+    }
+
+    .mayor-link a {
+        margin-top: 5px;
+        font-size: 16px;
+        height: 30px;
+        padding-right: 12px;
+        padding-left: 32px;
+        line-height: 26px;
+    }
+
+    .mayor-link a:hover {
+        line-height: 28px;
+    }
+
+    .mayor-img {
+        height: 150px;
+        width: auto;
+        right: -20px;
     }
 
 }
@@ -1892,6 +1964,37 @@ body {
         padding: 0 20px;
         margin-top: 40px;
     }
+
+    
+    .mayor {
+        overflow: visible;
+        padding: 40px 35px;
+        margin-top: 30px;
+    }
+
+    .mayor > a {
+        font-size: 22px;
+    }
+
+    .mayor-link {
+        margin-top: 20px;
+    }
+
+    .mayor-link a {
+        height: 36px;
+        line-height: 32px;
+        margin-right: 10px;
+        padding-right: 21px;
+    }
+
+    .mayor-link a:hover {        
+        line-height: 34px;
+    }
+
+    .mayor-img {
+        height: 265px;
+        right: 45px;
+    }
 }
 
 
@@ -1908,12 +2011,119 @@ body {
         top: 115px;
         transform: translate(50%, -50%);
     }
+
+    .mayor {
+        padding: 50px 35px;
+    }
+
+    .mayor-link {
+        width: 60%;
+    }
+    .mayor-link a:last-child {
+        margin-top: 20px;
+    }
 }
 
-@media all and (max-width: 770px) {    
-}
+@media all and (max-width: 640px) {
 
-@media all and (max-width: 640px) {    
+    .weather-wrap {
+        top: 35px;
+    }
+
+    .sns-wrap {
+        top: 90px;
+        width: 300px;
+    }
+    
+    .sns-icon {
+        display: none;
+    } 
+    .sns-wrap span {
+       font-size: 18px;
+    }
+    .sns-txt {
+        width: 66px;
+    }
+
+    .visual-top {
+        height: 150px;
+    }
+
+    .visual-slide h2 {
+        font-size: 20px;
+    }
+
+    .visual-slide-top {
+        padding-top: 10px;
+    }
+    .sw-visual-control  {
+        top: 5px
+    }
+
+    .visual-link {
+        width: 110px;
+        height: 37px;
+        line-height: 37px;
+        font-size: 12px;
+        padding-right: 37px;
+        padding-left: 17px;
+        font-weight: 400;
+    }
+
+    .visual-link::after {
+        right: 4px;
+        transform: scale(0.8) translateY(-60%) ;
+    }
+    .visual-link:hover::after {
+        right: 0;
+    }
+
+    .link-vi {
+        top: -35px;
+        left: -110%;
+    }   
+
+    .group {                
+    }
+    .group-nav {
+        display: flex;
+        justify-content: center;
+    }
+    .group-nav > li {
+        display: block;
+        width: 20%;
+    }
+    .group-nav > li > a {
+        height: 92px;
+        padding-top: 60px;
+    }
+    .group-nav > li > a::before {
+        width: 52px;
+        height: 52px;
+    }
+
+    
+    .mayor {
+        padding: 10px 25px;
+        margin-top: 20px;
+    }
+
+    .mayor > a {
+        font-size: 16px;
+    }
+
+    .mayor-link {
+        width: 70%;
+        margin-top: 0;
+    }
+    .mayor-link a:last-child {  
+        margin-top: 10px;      
+    }
+
+    .mayor-img {
+        height: 170px;
+        right: 0px;
+    }
 }
 
 /* 소식 */
