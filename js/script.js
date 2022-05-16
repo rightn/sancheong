@@ -1,4 +1,12 @@
+$(document).ready(function(){
+    let modal_close = $('.modal-close');
+    let modal= $('.modal');
+    modal_close.click(function(){
+        modal.hide();
+    })
+})
 window.onload = function () {
+
 
     // aos 관련
     AOS.init({
